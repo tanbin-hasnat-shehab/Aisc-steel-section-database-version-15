@@ -19,9 +19,11 @@ def main():
 		for i in range(0,len(names)):
 			if section==names[i]:
 				indi_name=i+1
+				break
 		for i in range(1,86):
 			if prop==sheet.cell(row=1,column=i).value:
 				indi_prop=i
+				break
         
 		try:
 			st.write(f'''Value : {sheet.cell(row=indi_name+1,column=indi_prop).value}''')
