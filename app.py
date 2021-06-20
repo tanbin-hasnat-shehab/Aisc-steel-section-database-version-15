@@ -15,11 +15,17 @@ def main():
 		section.upper()
 		print(section)
 
-
+		
 		for i in range(0,len(names)):
 			if section==names[i]:
 				indi_name=i+1
 				break
+		if indi_name!=None:
+			for i in range(0,len(names_tr_label)):
+				if section==names_tr_label[i]:
+					indi_name=i+1
+					break
+		
 		for i in range(1,86):
 			if prop==sheet.cell(row=1,column=i).value:
 				indi_prop=i
@@ -45,6 +51,10 @@ def main():
 		for i in range(1,len(sheet['A'])+1):
 			name_tr=sheet.cell(row=i+1,column=2).value
 			names.append(name_tr)
+		name_tr_label=[]
+		for i in range(1,len(sheet['A'])+1):
+			name_tr=sheet.cell(row=i+1,column=3).value
+			name_tr_label.append(name_tr)
         
 
 		caln()
