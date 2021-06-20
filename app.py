@@ -20,7 +20,7 @@ def main():
 			if section==names[i]:
 				indi_name=i+1
 				break
-		if indi_name!=None:
+		if indi_name==None:
 			for i in range(0,len(names_tr_label)):
 				if section==names_tr_label[i]:
 					indi_name=i+1
