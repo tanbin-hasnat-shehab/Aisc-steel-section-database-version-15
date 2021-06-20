@@ -48,8 +48,11 @@ def main():
 	
 		name_tr_label=[]
 		for i in range(1,len(sheet['A'])+1):
-			name_tr=sheet.cell(row=i+1,column=3).value
-			name_tr_label.append(name_tr)
+			if i==1:
+				name_tr_label.append('')
+			else:
+				name_tr=sheet.cell(row=i,column=3).value
+				name_tr_label.append(name_tr)
 		section=st.selectbox('Select or write section',name_tr_label)
 		caln()
 
