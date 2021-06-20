@@ -20,7 +20,7 @@ def main():
 		"""
 		<style type="text/css" media="screen">
 		div[role="prop"] ul {
-		    height:300px;
+		    height:50px;
 		}
 		</style>
 		"""
