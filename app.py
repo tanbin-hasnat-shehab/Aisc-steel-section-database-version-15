@@ -10,6 +10,26 @@ def about():
 
 
 def main():
+	def caln():
+		prop_arr=[]
+		for i in range(1,86):
+			name_tr=sheet.cell(row=1,column=i).value
+			prop_arr.append(name_tr)
+		prop=st.selectbox('Select or write property',prop_arr)
+		
+		#######
+		
+		
+		st.write(f'you selected {section}')
+		st.write(f'you selected {prop}')
+		
+		if section in name_tr_label:
+			indi_name=name_tr_label.index(section)+1
+		if prop in prop_arr:
+			prop_name=prop_arr.index(prop)+1
+			
+			
+		st.write(f'value : {sheet.cell(row=indi_name,column=prop_name).value}')
 	
 
 	st.title("Aisc database version - v15 : ")
@@ -30,9 +50,8 @@ def main():
 		for i in range(1,len(sheet['A'])+1):
 			name_tr=sheet.cell(row=i+1,column=3).value
 			name_tr_label.append(name_tr)
-		#######
-		result=st.selectbox('Select or write section',name_tr_label)
-		st.write(f'you selected {result}')
+		section=st.selectbox('Select or write section',name_tr_label)
+		caln()
 
 		
         
