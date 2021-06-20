@@ -21,8 +21,8 @@ def main():
 				indi_name=i+1
 				break
 		if indi_name==0:
-			for i in range(0,len(names_tr_label)):
-				if section==names_tr_label[i]:
+			for i in range(0,len(name_tr_label)):
+				if section==name_tr_label[i]:
 					indi_name=i+1
 					break
 		
