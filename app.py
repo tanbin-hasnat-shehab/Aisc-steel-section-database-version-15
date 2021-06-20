@@ -1,6 +1,7 @@
 
 import streamlit as st
 from openpyxl import load_workbook
+@st.cache
 
 def about():
     st.write(
