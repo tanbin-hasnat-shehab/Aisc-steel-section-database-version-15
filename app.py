@@ -32,14 +32,13 @@ def main():
 			name_tr_label.append(name_tr)
     	#######
 	result=st.selectbox('Select or write section',name_tr_label)
-    	st.write(f'you selected {result}')
+	st.write(f'you selected {result}')
 
 		
         
 
 	elif choice == "About":
 		about()
-
 
 
 
