@@ -21,7 +21,7 @@ def main():
 		
 		
 		st.write(f'you selected {section}')
-		st.write(f'you selected {prop}')
+		
 		
 		if section in name_tr_label:
 			indi_name=name_tr_label.index(section)+1
@@ -29,7 +29,7 @@ def main():
 			prop_name=prop_arr.index(prop)+1
 			
 			
-		st.write(f'value : {sheet.cell(row=indi_name,column=prop_name).value}')
+		st.write(f'value : {prop} = {sheet.cell(row=indi_name,column=prop_name).value}')
 	
 
 	st.title("Aisc database version - v15 : ")
