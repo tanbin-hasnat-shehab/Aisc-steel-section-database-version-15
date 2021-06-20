@@ -11,12 +11,13 @@ def about():
 
 def main():
 	st.set_page_config(layout="wide")
+	c1, c2 = st.beta_columns((2, 1))
 	def caln():
 		prop_arr=[]
 		for i in range(1,86):
 			name_tr=sheet.cell(row=1,column=i).value
 			prop_arr.append(name_tr)
-		prop=st.selectbox('Select or write property',prop_arr,3)
+		prop=c2.selectbox('Select or write property',prop_arr,3)
 		
 		
 		#######
