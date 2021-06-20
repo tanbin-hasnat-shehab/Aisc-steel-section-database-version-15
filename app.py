@@ -15,18 +15,8 @@ def main():
 		for i in range(1,86):
 			name_tr=sheet.cell(row=1,column=i).value
 			prop_arr.append(name_tr)
-		prop=st.selectbox('Select or write property',prop_arr)
-		st.write(
-		"""
-		<style type="text/css" media="screen">
-		div[role="prop"] ul {
-		    height:50px;
-		}
-		</style>
-		"""
-		,
-		unsafe_allow_html=True,
-	    	)
+		prop=st.selectbox('Select or write property',prop_arr,visible_elements=3)
+		
 		
 		#######
 		
