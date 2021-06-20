@@ -10,6 +10,7 @@ def about():
 
 
 def main():
+	st.set_page_config(layout="wide")
 	def caln():
 		prop_arr=[]
 		for i in range(1,86):
