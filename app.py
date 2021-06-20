@@ -16,7 +16,17 @@ def main():
 			name_tr=sheet.cell(row=1,column=i).value
 			prop_arr.append(name_tr)
 		prop=st.selectbox('Select or write property',prop_arr)
-		prop.maxDropdownHeight(3)
+		st.write(
+		"""
+		<style type="text/css" media="screen">
+		div[role="prop"] ul {
+		    height:300px;
+		}
+		</style>
+		"""
+		,
+		unsafe_allow_html=True,
+	    	)
 		
 		#######
 		
