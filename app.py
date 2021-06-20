@@ -30,9 +30,9 @@ def main():
 		for i in range(1,len(sheet['A'])+1):
 			name_tr=sheet.cell(row=i+1,column=3).value
 			name_tr_label.append(name_tr)
-    	#######
-	result=st.selectbox('Select or write section',name_tr_label)
-	st.write(f'you selected {result}')
+		#######
+		result=st.selectbox('Select or write section',name_tr_label)
+		st.write(f'you selected {result}')
 
 		
         
