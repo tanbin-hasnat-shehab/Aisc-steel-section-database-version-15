@@ -56,7 +56,7 @@ def main():
 			else:
 				name_tr=sheet.cell(row=i,column=3).value
 				name_tr_label.append(name_tr)
-		section=st.selectbox('Select or write section',name_tr_label)
+		section=c1.selectbox('Select or write section',name_tr_label)
 		caln()
 
 		
