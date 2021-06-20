@@ -16,15 +16,12 @@ def main():
 		print(section)
 
 		indi_name=0
-		for i in range(0,len(names)):
-			if section==names[i]:
-				indi_name=i+1
-				break
-		if indi_name==0:
-			for i in range(0,len(name_tr_label)):
-				if section==name_tr_label[i]:
-					indi_name=i+1
-					break
+		if section in names:
+			indi_name=names.index(section)+1
+		if section in name_tr_label:
+			indi_name=name_tr_label.index(section)+1
+		
+		
 		
 		for i in range(1,86):
 			if prop==sheet.cell(row=1,column=i).value:
@@ -32,7 +29,11 @@ def main():
 				break
         
 		try:
-			st.write(f'''Value : {sheet.cell(row=indi_name+1,column=indi_prop).value}''')
+			if indi_name!=0:
+				st.write(f'''Value : {sheet.cell(row=indi_name+1,column=indi_prop).value}''')
+			else:
+				st.write('Could not found')
+				
 		except:
 			st.write('Could not found')
 	st.title("Aisc database version - v15 : ")
