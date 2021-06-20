@@ -15,7 +15,7 @@ def main():
 		for i in range(1,86):
 			name_tr=sheet.cell(row=1,column=i).value
 			prop_arr.append(name_tr)
-		prop=st.selectbox('Select or write property',prop_arr,visible_elements=3)
+		prop=st.selectbox('Select or write property',prop_arr,visible_elements(3),search-first(True))
 		
 		
 		#######
