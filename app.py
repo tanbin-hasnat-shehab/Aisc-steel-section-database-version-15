@@ -30,7 +30,7 @@ def main():
 		if section in name_tr_label:
 			indi_name=name_tr_label.index(section)+1
 		for i in range(4,90):
-			st.write(f'{prop_arr[i]} = {sheet.cell(row=indi_name,column=i).value}')
+			st.write(f'{prop_arr[i]} = {sheet.cell(row=indi_name,column=i-3).value}')
 		
 		
 		
