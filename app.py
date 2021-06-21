@@ -18,22 +18,12 @@ def main():
 		for i in range(1,86):
 			name_tr=sheet.cell(row=1,column=i).value
 			prop_arr.append(name_tr)
-		prop=st.selectbox('Select or write property',prop_arr)
+
+		for i in range(4,90):
+			st.write(f'{prop_arr[i]} = {sheet.cell(row=indi_name,column=i).value}')
 		
 		
-		#######
 		
-		
-		st.write(f'you selected {section}')
-		
-		
-		if section in name_tr_label:
-			indi_name=name_tr_label.index(section)+1
-		if prop in prop_arr:
-			prop_name=prop_arr.index(prop)+1
-			
-			
-		st.write(f'value : {prop} = {sheet.cell(row=indi_name,column=prop_name).value}')
 	
 
 	st.title("Aisc database version - v15 : ")
