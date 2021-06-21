@@ -20,6 +20,8 @@ def main():
 			prop_arr.append(name_tr)
 		prop=st.selectbox('Select or write property',prop_arr)
 		st.write(f'you selected # {section}')
+		if section in name_tr_label:
+			indi_name=name_tr_label.index(section)+1
 		if prop in prop_arr:
 			prop_name=prop_arr.index(prop)+1
 			
@@ -27,11 +29,10 @@ def main():
 		st.write(f'#value : {prop} = {sheet.cell(row=indi_name,column=prop_name).value}')
 
 
-		if section in name_tr_label:
-			indi_name=name_tr_label.index(section)+1
+		j=0
 		for i in range(4,90):
-			st.write(f'{prop_arr[i]} = {sheet.cell(row=indi_name,column=i-3).value}')
-		
+			st.write(f'{prop_arr[j]} = {sheet.cell(row=indi_name,column=i-3).value}')
+			j+=1
 		
 		
 	
