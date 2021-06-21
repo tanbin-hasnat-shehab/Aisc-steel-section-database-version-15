@@ -18,6 +18,8 @@ def main():
 		for i in range(1,86):
 			name_tr=sheet.cell(row=1,column=i).value
 			prop_arr.append(name_tr)
+		if section in name_tr_label:
+			indi_name=name_tr_label.index(section)+1
 
 		for i in range(4,90):
 			st.write(f'{prop_arr[i]} = {sheet.cell(row=indi_name,column=i).value}')
