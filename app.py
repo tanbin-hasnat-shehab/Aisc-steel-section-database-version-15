@@ -22,7 +22,7 @@ def main():
 			indi_name=name_tr_label.index(section)+1
 		j=0
 		for i in range(4,89):
-			st.write(f'{prop_arr[j]} = {sheet.cell(row=indi_name,column=i-4).value}')
+			st.write(f'{prop_arr[j]} = {sheet.cell(row=indi_name,column=i-3).value}')
 			j+=1
 		
 		
