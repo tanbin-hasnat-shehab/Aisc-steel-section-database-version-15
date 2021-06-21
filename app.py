@@ -21,7 +21,7 @@ def main():
 		if section in name_tr_label:
 			indi_name=name_tr_label.index(section)+1
 
-		for i in range(4,90):
+		for i in range(4,89):
 			st.write(f'{prop_arr[i]} = {sheet.cell(row=indi_name,column=i).value}')
 		
 		
