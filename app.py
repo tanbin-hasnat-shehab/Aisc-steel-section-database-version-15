@@ -26,7 +26,7 @@ def main():
 			prop_name=prop_arr.index(prop)+1
 			
 			
-		st.write(f'#value : {prop} = {sheet.cell(row=indi_name,column=prop_name).value}')
+		st.markdown(f'''#value : {prop} = {sheet.cell(row=indi_name,column=prop_name).value}''')
 
 
 		j=0
