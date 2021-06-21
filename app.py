@@ -19,7 +19,7 @@ def main():
 			name_tr=sheet.cell(row=1,column=i).value
 			prop_arr.append(name_tr)
 		prop=st.selectbox('Select or write property',prop_arr)
-		st.write(f'you selected # {section}')
+		st.markdown(f"""# you selected  {section}""")
 		if section in name_tr_label:
 			indi_name=name_tr_label.index(section)+1
 		if prop in prop_arr:
