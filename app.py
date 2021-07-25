@@ -3,6 +3,7 @@ import streamlit as st
 from openpyxl import load_workbook
 from reportlab.pdfgen import canvas
 from PyPDF2 import PdfFileWriter, PdfFileReader
+my_pdf=canvas.Canvas('temp.pdf')
 @st.cache
 
 def about():
